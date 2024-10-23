@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -ne 2 ]; then
-    echo "Please write in this format: ./myprog1.sh <string> <int>"
+    echo "Please run the script in this format: ./myprog1.sh <string> <int>"
     exit 1
 fi
 

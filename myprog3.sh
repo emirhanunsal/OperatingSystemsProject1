@@ -13,4 +13,4 @@ for file in *; do
     fi
 done
 
-echo "$count files moved to the directory writable"
+echo "$count files moved to the directory "writable""

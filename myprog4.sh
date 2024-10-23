@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Please write in this format: ./myprog.sh <number>"
+  echo "Please run the script in this format: ./myprog.sh <number>"
   exit 1
 fi
 
