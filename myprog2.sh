@@ -7,6 +7,7 @@ fi
 
 output_file="$1"
 
+#overwrite the file
 if [ -f "$output_file" ]; then
     read -p "$output_file already exists. Do you want to overwrite? (Y/n): " choice
     case "$choice" in
@@ -16,6 +17,7 @@ if [ -f "$output_file" ]; then
     esac
 fi
 
+#set the line numbers according to random number generator
 set_line_number() {
     random_number=$((RANDOM % 3 + 1))
 

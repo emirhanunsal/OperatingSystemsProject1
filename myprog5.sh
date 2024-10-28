@@ -5,6 +5,7 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+#delete all files starts with input
 for file in $(find . -type f -name "$1"); do
     echo "Deleting: $file"
     rm "$file"
