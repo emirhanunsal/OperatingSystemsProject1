@@ -10,6 +10,7 @@ number=$1
 declare -a primeNumbers
 primeCount=0
 
+#check all prime numbers from 2 to the input's square root
 for ((i=2; i<=number; i++)); do
   isPrime=true
 

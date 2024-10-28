@@ -6,6 +6,7 @@ if [ ! -d writable ]; then
     mkdir writable
 fi
 
+#move all files to the writable dir
 for file in *; do
     if [ -f "$file" ] && [ -w "$file" ]; then
         mv "$file" writable/
