@@ -1,12 +1,15 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-    echo "Please run the script in this format: ./myprog5.sh xyz*"
+    echo "Please run the script in this format: ./myprog5.sh \"xyz*\""
     exit 1
 fi
 
-#delete all files starts with input
-for file in $(find . -type f -name "$1"); do
+#All files to the array
+files=($(find . -type f -name "$1"))
+
+#Delete files in array
+for file in "${files[@]}"; do
     echo "Deleting: $file"
     rm "$file"
 done

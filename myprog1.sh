@@ -38,7 +38,7 @@ if [ ${#input} -lt ${#number} ]; then
 fi
 
 
-#
+#chance first input's all letters according to second input
 for (( i=0; i<${#input}; i++ )); do
     currentChar="${input:$i:1}"
     add="${number:$i:1}"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 count=0
-
+#check if writable dir exists
 if [ ! -d writable ]; then
     mkdir writable
 fi

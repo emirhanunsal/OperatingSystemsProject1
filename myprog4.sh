@@ -1,16 +1,23 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Please run the script in this format: ./myprog.sh <number>"
+  echo "Please run the script in this format: ./myprog4.sh <number>"
+  exit 1
+fi
+
+#integer check
+if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+  echo "Error: Input must be an integer. Please enter a valid number."
   exit 1
 fi
 
 number=$1
 
+#declare an array
 declare -a primeNumbers
 primeCount=0
 
-#check all prime numbers from 2 to the input's square root
+#check all prime numbers from 2 to the input's squareroot
 for ((i=2; i<=number; i++)); do
   isPrime=true
 
