@@ -5,17 +5,8 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-#all files to the array
-files=($(find . -type f -name "$1"))
-
-#exit if there is no file
-if [ ${#files[@]} -eq 0 ]; then
-    echo "No files found matches with '$1'."
-    exit 1
-fi
-
-#delete all files in array
-for file in "${files[@]}"; do
+#finding all files matching the pattern and separating them by NULL character
+find . -type f -name "$1" -print0 | while IFS= read -r -d '' file; do
     echo "Deleting: $file"
     rm "$file"
 done
